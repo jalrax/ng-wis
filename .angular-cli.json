@@ -19,6 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "./assets/vendor/bootstrap/css/bootstrap.min.css",
+        "./assets/css/heroic-features.css",
         "styles.css"
       ],
       "scripts": [],
