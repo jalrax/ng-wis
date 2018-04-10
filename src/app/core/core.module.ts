@@ -4,8 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreComponent } from './core.component';
 import { CoreRoutingModule } from './core-routing.module';
-import { ListComponent } from './pages/list/list.component';
+import {WaresListComponent} from './pages/wares-list/wares-list.component';
 import { BasketComponent } from './pages/basket/basket.component';
+import {WishListComponent} from './pages/wish-list/wish-list.component';
 
 @NgModule({
   imports: [
@@ -16,8 +17,9 @@ import { BasketComponent } from './pages/basket/basket.component';
   ],
   declarations: [
     CoreComponent,
-    ListComponent,
-    BasketComponent
+    WaresListComponent,
+    BasketComponent,
+    WishListComponent
   ]
 })
 export class CoreModule {
