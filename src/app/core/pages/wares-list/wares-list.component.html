@@ -19,6 +19,59 @@
       </ul>
     </div>
   </div>
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li *ngFor="let item of list">
+        <a>
+          <div class="pull-left">
+            <img src="{{ item.picture }}" class="img-circle" alt="User Image">
+          </div>
+          <h4>
+            {{ item.name }}
+            <small><i class="fa fa-clock-o"></i> {{ date | date:'short' }}</small>
+          </h4>
+          <p>{{ item.price }}</p>
+        </a>
+      </li>
+    </div>
+  </div>
+
+  <ul class="nav navbar-nav">
+    <li class="dropdown messages-menu" dropdown>
+      <a class="dropdown-toggle" dropdownToggle>
+        <i class="fa fa-envelope-o"></i>
+        <span class="label label-success">4</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header">You have 4 messages</li>
+        <li>
+          <!-- inner menu: contains the actual data -->
+          <ul class="menu" *dropdownMenu>
+            <li *ngFor="let item of list">
+              <a>
+                <div class="pull-left">
+                  <img src="{{ item.picture }}" class="img-circle" alt="User Image">
+                </div>
+                <h4>
+                  {{ item.name }}
+                  <small><i class="fa fa-clock-o"></i> {{ date | date:'short' }}</small>
+                </h4>
+                <p>{{ item.price }}</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+        <li class="footer"><a href="#">See All Messages</a></li>
+      </ul>
+    </li>
+
+  </ul>
 </nav>
 
 <!-- Page Content -->
